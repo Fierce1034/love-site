@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Us</title>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Segoe UI', sans-serif;
+    background: radial-gradient(circle at top, #1b2a4e, #0b1026 70%);
+    color: #cfe9ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+  }
+
+  /* Stars */
+  body::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(2px 2px at 20% 30%, white, transparent),
+      radial-gradient(1.5px 1.5px at 70% 40%, white, transparent),
+      radial-gradient(1px 1px at 40% 80%, white, transparent),
+      radial-gradient(2px 2px at 80% 70%, white, transparent),
+      radial-gradient(1px 1px at 10% 60%, white, transparent);
+    opacity: 0.7;
+    z-index: 0;
+  }
+
+  /* Moon */
+  .moon {
+    position: absolute;
+    top: 60px;
+    right: 80px;
+    width: 120px;
+    height: 120px;
+    background: #f5f9ff;
+    border-radius: 50%;
+    box-shadow: 0 0 40px rgba(245,249,255,0.6);
+    z-index: 1;
+  }
+
+  /* Container */
+  .container {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 1.4;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 17px;
+    opacity: 0.9;
+    margin-bottom: 25px;
+  }
+
+  .hint {
+    font-size: 14px;
+    opacity: 0.7;
+    margin-bottom: 35px;
+  }
+
+  /* Button */
+  .btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 30px;
+    border: 1px solid rgba(207,233,255,0.6);
+    color: #cfe9ff;
+    text-decoration: none;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(5px);
+  }
+
+  .btn:hover {
+    background: rgba(207,233,255,0.18);
+    transform: translateY(-2px);
+  }
+
+  /* Floating bears */
+  .bear {
+    position: absolute;
+    font-size: 24px;
+    animation: float 6s ease-in-out infinite;
+    opacity: 0.85;
+    z-index: 1;
+  }
+
+  .bear.one { left: 15%; bottom: 20%; animation-delay: 0s; }
+  .bear.two { right: 20%; bottom: 30%; animation-delay: 2s; }
+  .bear.three { left: 45%; bottom: 10%; animation-delay: 4s; }
+
+  @keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+  }
+</style>
+</head>
+
+<body>
+
+  <div class="moon"></div>
+
+  <div class="bear one">🧸</div>
+  <div class="bear two">🧸</div>
+  <div class="bear three">🧸</div>
+
+  <div class="container">
+    <h1>
+      Some days don’t change the routine,<br>
+      they change the whole life.
+    </h1>
+
+    <p>And today became one of mine.</p>
+
+    <div class="hint">
+      For the girl who chose me — always.
+    </div>
+
+    <a href="page2.html" class="btn">Walk with me →</a>
+  </div>
+
+</body>
+</html>

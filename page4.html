@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Us</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Georgia', serif;
+    }
+
+    body {
+      height: 100vh;
+      background: radial-gradient(circle at top, #1b2a4e, #060b1a);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      overflow: hidden;
+    }
+
+    /* Stars */
+    body::before {
+      content: "";
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      background: url("https://www.transparenttextures.com/patterns/stardust.png");
+      opacity: 0.4;
+      animation: stars 80s linear infinite;
+    }
+
+    @keyframes stars {
+      from { transform: translate(0, 0); }
+      to { transform: translate(-50%, -50%); }
+    }
+
+    /* Moon */
+    .moon {
+      position: absolute;
+      top: 8%;
+      right: 10%;
+      width: 140px;
+      height: 140px;
+      background: #f5f3ce;
+      border-radius: 50%;
+      box-shadow: 0 0 40px rgba(255, 255, 200, 0.4);
+    }
+
+    /* Floating elements */
+    .float {
+      position: absolute;
+      animation: float 6s ease-in-out infinite;
+      opacity: 0.9;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+      100% { transform: translateY(0); }
+    }
+
+    .bear {
+      font-size: 28px;
+    }
+
+    .flower {
+      font-size: 22px;
+    }
+
+    /* Text box */
+    .message {
+      max-width: 720px;
+      padding: 42px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      text-align: left;
+      line-height: 1.75;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 0 30px rgba(0,0,0,0.3);
+      animation: fadeIn 2.5s ease;
+      z-index: 2;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .message p {
+      font-size: 20px;
+      margin-bottom: 18px;
+    }
+
+    .signature {
+      margin-top: 28px;
+      font-size: 18px;
+      opacity: 0.85;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="moon"></div>
+
+  <!-- Floating bears -->
+  <div class="float bear" style="left: 12%; top: 60%;">🧸</div>
+  <div class="float bear" style="right: 18%; top: 65%;">🧸</div>
+
+  <!-- Floating flowers & leaves -->
+  <div class="float flower" style="left: 20%; top: 30%;">🌸</div>
+  <div class="float flower" style="right: 25%; top: 35%;">🍃</div>
+  <div class="float flower" style="left: 70%; top: 25%;">🌼</div>
+
+  <!-- Message -->
+  <div class="message">
+    <p>
+      I knew you loved me by your actions, your words, and the way you cared for me.<br>
+      You did so many things thinking I wouldn’t notice, but I noticed all of them.
+    </p>
+
+    <p>
+      It was real. Pure. Without conditions.
+    </p>
+
+    <p>
+      Like God made us for each other.
+    </p>
+
+    <p>
+      It felt like we had known each other for so many years,<br>
+      like we were already living life together —<br>
+      just waiting to realize it.
+    </p>
+
+    <div class="signature">
+      — always yours
+    </div>
+  </div>
+
+</body>
+</html>
